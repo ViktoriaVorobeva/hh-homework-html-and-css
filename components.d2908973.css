@@ -241,6 +241,8 @@ template, [hidden] {
 :root {
   --color-dark: #212122;
   --color-light-gray: #eee;
+  --color-dark-grey: #999;
+  --color-medium-gray: #666;
   --font-family-heading: "Proxima Nova Condensed", Arial, sans-serif;
 }
 
@@ -768,8 +770,123 @@ body {
   }
 }
 
-.footer, .socials {
+.footer {
+  background-color: var(--color-dark);
+  padding: 30px 0 22px;
+}
+
+.footer__container {
+  position: relative;
+}
+
+.footer__container:after {
+  content: "";
+  background-color: var(--color-medium-gray);
+  width: 100%;
+  height: 1px;
+  position: absolute;
+  bottom: -30px;
+  left: 0;
+  right: 0;
+}
+
+@media (width >= 768px) {
+  .footer__container:after {
+    bottom: 30px;
+  }
+
+  .footer__container {
+    justify-content: space-between;
+    align-items: baseline;
+    display: flex;
+  }
+}
+
+.footer__link-logo {
+  display: none;
+}
+
+@media (width >= 1000px) {
+  .footer__link-logo {
+    cursor: pointer;
+    display: block;
+  }
+}
+
+.footer__link-logo:hover, .footer__link-logo:focus {
+  opacity: .8;
+}
+
+.footer__link-logo:active {
+  opacity: .6;
+}
+
+.footer__text {
+  color: var(--color-dark-grey);
   margin: 0;
+  line-height: 20px;
+}
+
+.socials {
+  margin-bottom: 30px;
+}
+
+.socials__list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  display: flex;
+}
+
+.socials__item:not(:last-child) {
+  margin-right: 15px;
+}
+
+.socials__link {
+  cursor: pointer;
+  display: block;
+}
+
+.socials__link:hover, .socials__link:focus {
+  opacity: .8;
+}
+
+.socials__link:active {
+  opacity: .6;
+}
+
+.loading {
+  margin-bottom: 46px;
+}
+
+@media (width >= 768px) {
+  .loading {
+    margin-bottom: 61px;
+  }
+}
+
+.loading__list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  display: flex;
+}
+
+.loading__item:not(:last-child) {
+  margin-right: 8px;
+}
+
+.loading__link {
+  cursor: pointer;
+  display: block;
+}
+
+.loading__link:hover, .loading__link:focus {
+  opacity: .8;
+}
+
+.loading__link:active {
+  opacity: .6;
 }
 
 /*# sourceMappingURL=components.d2908973.css.map */
