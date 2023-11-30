@@ -1,0 +1,28 @@
+.socials {
+    margin-bottom: 30px;
+}
+
+.socials__list {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+}
+
+.socials__item:not(:last-child)  {
+    margin-right: 15px;
+}
+
+.socials__link {
+    display: block;
+    cursor: pointer;
+
+    &:hover, 
+    &:focus {
+        opacity: 0.8;
+    }
+
+    &:active {
+        opacity: 0.6;
+    }
+}
