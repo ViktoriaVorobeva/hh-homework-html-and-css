@@ -1,0 +1,32 @@
+.loading {
+    margin-bottom: 46px;
+
+    @media @screen-gt-s {
+        margin-bottom: 61px;
+    }
+}
+
+.loading__list {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+}
+
+.loading__item:not(:last-child) {
+    margin-right: 8px;
+}
+
+.loading__link {
+    display: block;
+    cursor: pointer;
+    
+    &:hover, 
+    &:focus {
+        opacity: 0.8;
+    }
+
+    &:active {
+        opacity: 0.6;
+    }
+}
